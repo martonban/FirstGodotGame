@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="FirstGodotGame"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="res://scenes/levels/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Music="*res://scenes/music.tscn"
+Music="*res://scenes/Prefabs/music.tscn"
 
 [input]
 

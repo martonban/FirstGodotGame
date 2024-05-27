@@ -1,15 +1,15 @@
 [gd_scene load_steps=14 format=3 uid="uid://b1m111ovybida"]
 
-[ext_resource type="PackedScene" uid="uid://dhhjthe2tbrmm" path="res://scenes/player.tscn" id="1_acvbf"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_pw0u2"]
-[ext_resource type="Texture2D" uid="uid://cc3p3b3u3hwoh" path="res://assets/sprites/world_tileset.png" id="2_fcbs2"]
-[ext_resource type="PackedScene" uid="uid://bf8wr7hy23q7h" path="res://scenes/platform.tscn" id="3_qo0uf"]
-[ext_resource type="PackedScene" uid="uid://denwyaut8atqe" path="res://scenes/coin.tscn" id="4_mfbky"]
-[ext_resource type="PackedScene" uid="uid://dcyxtir53cu4d" path="res://scenes/killzone.tscn" id="5_jsnrt"]
-[ext_resource type="PackedScene" uid="uid://cr8rdxcp6cd37" path="res://scenes/slime.tscn" id="6_ro1tq"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_6q0k6"]
+[ext_resource type="Texture2D" uid="uid://cc3p3b3u3hwoh" path="res://assets/sprites/world_tileset.png" id="2_ccg0g"]
+[ext_resource type="PackedScene" uid="uid://dhhjthe2tbrmm" path="res://scenes/Prefabs/player.tscn" id="3_hotc7"]
+[ext_resource type="PackedScene" uid="uid://dcyxtir53cu4d" path="res://scenes/Prefabs/killzone.tscn" id="4_86ctk"]
+[ext_resource type="PackedScene" uid="uid://denwyaut8atqe" path="res://scenes/Prefabs/coin.tscn" id="5_ol08c"]
+[ext_resource type="PackedScene" uid="uid://bf8wr7hy23q7h" path="res://scenes/Prefabs/platform.tscn" id="6_p27f0"]
+[ext_resource type="PackedScene" uid="uid://cr8rdxcp6cd37" path="res://scenes/Prefabs/slime.tscn" id="7_728yu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bvd7"]
-texture = ExtResource("2_fcbs2")
+texture = ExtResource("2_ccg0g")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -453,7 +453,7 @@ _data = {
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("1_pw0u2")
+script = ExtResource("1_6q0k6")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_orslg")
@@ -463,7 +463,7 @@ layer_0/tile_data = PackedInt32Array(65543, 0, 13, 65544, 0, 13, 65545, 0, 13, 6
 layer_1/name = "Mid"
 layer_1/tile_data = PackedInt32Array(65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 131063, 0, 1, 196599, 0, 1, 131064, 0, 1, 196600, 0, 1, 131065, 0, 1, 196601, 0, 1, 196602, 0, 1, 196603, 0, 1, 131067, 0, 0, 131066, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 131076, 0, 1, 131077, 0, 1, 131078, 0, 1, 65540, 0, 1, 65541, 0, 1, 65542, 0, 1, 4, 0, 1, 5, 0, 1, 6, 0, 1, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 589824, 0, -65528, 655360, 0, -65527, 655360, 0, -65526, 655360, 0, -65525, 655360, 0, -65524, 720896, 0, 65526, 0, 0, 65525, 0, 0, 65524, 0, 0, 65522, 0, 0, 65521, 0, 0, 65523, 0, 0, 131062, 0, 1, 131061, 0, 1, 131060, 0, 1, 131059, 0, 1, 131058, 0, 1, 131057, 0, 1, 196598, 0, 1, 196597, 0, 1, 196596, 0, 1, 196595, 0, 1, 196594, 0, 1, 196593, 0, 1, -11, 196608, 8, -65547, 196608, 7, -196619, 131072, 4, -65510, 458752, 0, -65509, 458752, 0, -65508, 458752, 0, -65507, 458752, 0, -65506, 458752, 0, -65505, 458752, 0, 26, 393216, 2, 27, 393216, 2, 28, 393216, 2, 29, 393216, 2, 30, 393216, 2, 31, 393216, 2, 65562, 393216, 2, 65563, 393216, 2, 65564, 393216, 2, 65565, 393216, 2, 65566, 393216, 2, 65567, 393216, 2, 131098, 393216, 2, 131099, 393216, 2, 131100, 393216, 2, 131101, 393216, 2, 131102, 393216, 2, 131103, 393216, 2, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, 13, 0, 1, 14, 0, 1, 15, 0, 1, 16, 0, 1, 65549, 0, 1, 65550, 0, 1, 65551, 0, 1, 65552, 0, 1, 131085, 0, 1, 131086, 0, 1, 131087, 0, 1, 131088, 0, 1, -10, 65536, 5, -13, 65536, 5, -131056, 524288, 3, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 1, 65519, 0, 1, 65520, 0, 0, 131048, 0, 1, 131049, 0, 1, 131050, 0, 1, 131051, 0, 1, 131052, 0, 1, 131053, 0, 1, 131054, 0, 1, 131055, 0, 1, 131056, 0, 1, 65511, 0, 1, 65512, 0, 0, -26, 0, 0, -25, 0, 0, 65510, 0, 1, 131046, 0, 1, 131047, 0, 1, -18, 0, 0, -17, 0, 0, 196581, 0, 1, 196582, 0, 1, 196583, 0, 1, 196584, 0, 1, 196585, 0, 1, 196586, 0, 1, 196587, 0, 1, 196588, 0, 1, 196589, 0, 1, 196590, 0, 1, 196591, 0, 1, 196592, 0, 1, 131045, 0, 1, 65509, 0, 1, -27, 0, 0)
 
-[node name="Player" parent="." instance=ExtResource("1_acvbf")]
+[node name="Player" parent="." instance=ExtResource("3_hotc7")]
 position = Vector2(-127, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -473,7 +473,7 @@ limit_bottom = 78
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="Killzone" parent="." instance=ExtResource("5_jsnrt")]
+[node name="Killzone" parent="." instance=ExtResource("4_86ctk")]
 position = Vector2(-5, 83)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -481,18 +481,18 @@ shape = SubResource("WorldBoundaryShape2D_i4b0v")
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource("4_mfbky")]
+[node name="Coin" parent="Coins" instance=ExtResource("5_ol08c")]
 position = Vector2(87, -26)
 
-[node name="Coin2" parent="Coins" instance=ExtResource("4_mfbky")]
+[node name="Coin2" parent="Coins" instance=ExtResource("5_ol08c")]
 position = Vector2(-7, 6)
 
-[node name="Coin3" parent="Coins" instance=ExtResource("4_mfbky")]
+[node name="Coin3" parent="Coins" instance=ExtResource("5_ol08c")]
 position = Vector2(-233, -11)
 
 [node name="Platforms" type="Node" parent="."]
 
-[node name="Platform" parent="Platforms" instance=ExtResource("3_qo0uf")]
+[node name="Platform" parent="Platforms" instance=ExtResource("6_p27f0")]
 position = Vector2(290, -11)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform"]
@@ -501,5 +501,5 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Slime" parent="." instance=ExtResource("6_ro1tq")]
+[node name="Slime" parent="." instance=ExtResource("7_728yu")]
 position = Vector2(-376, 0)
