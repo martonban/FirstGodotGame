@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqjt74ub4qj8h"]
+
+[ext_resource type="Shader" path="res://assets/shaders/bush_shader.glsl.gdshader" id="1_kcffw"]
+[ext_resource type="Script" path="res://scripts/bush.gd" id="1_nsvti"]
+[ext_resource type="Texture2D" uid="uid://cc3p3b3u3hwoh" path="res://assets/sprites/world_tileset.png" id="2_wc4h5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ukfr8"]
+shader = ExtResource("1_kcffw")
+shader_parameter/speed = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcjxx"]
+size = Vector2(14, 13)
+
+[node name="BushPrefab" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_nsvti")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ukfr8")
+texture = ExtResource("2_wc4h5")
+region_enabled = true
+region_rect = Rect2(16, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_pcjxx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

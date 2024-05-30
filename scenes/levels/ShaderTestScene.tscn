@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cc3p3b3u3hwoh" path="res://assets/sprites/world_tileset.png" id="1_vxlrd"]
 [ext_resource type="PackedScene" uid="uid://dhhjthe2tbrmm" path="res://scenes/Prefabs/player.tscn" id="2_oonh5"]
-[ext_resource type="PackedScene" uid="uid://fbuxkfxys2w5" path="res://scenes/Prefabs/bush_shader_prefab.tscn" id="3_ch8e3"]
+[ext_resource type="PackedScene" uid="uid://bqjt74ub4qj8h" path="res://scenes/Prefabs/bush_prefab.tscn" id="3_ti8g7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4xi10"]
 texture = ExtResource("1_vxlrd")
@@ -410,5 +410,5 @@ zoom = Vector2(4, 4)
 position = Vector2(57, 33)
 collision_layer = 1
 
-[node name="BushShaderPrefab" parent="." instance=ExtResource("3_ch8e3")]
-position = Vector2(120, 41)
+[node name="BushPrefab" parent="." instance=ExtResource("3_ti8g7")]
+position = Vector2(120, 40)

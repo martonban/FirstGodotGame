@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1m111ovybida"]
+[gd_scene load_steps=15 format=3 uid="uid://b1m111ovybida"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_6q0k6"]
 [ext_resource type="Texture2D" uid="uid://cc3p3b3u3hwoh" path="res://assets/sprites/world_tileset.png" id="2_ccg0g"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://denwyaut8atqe" path="res://scenes/Prefabs/coin.tscn" id="5_ol08c"]
 [ext_resource type="PackedScene" uid="uid://bf8wr7hy23q7h" path="res://scenes/Prefabs/platform.tscn" id="6_p27f0"]
 [ext_resource type="PackedScene" uid="uid://cr8rdxcp6cd37" path="res://scenes/Prefabs/slime.tscn" id="7_728yu"]
+[ext_resource type="PackedScene" uid="uid://bqjt74ub4qj8h" path="res://scenes/Prefabs/bush_prefab.tscn" id="8_klj5e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bvd7"]
 texture = ExtResource("2_ccg0g")
@@ -503,3 +504,6 @@ autoplay = "move"
 
 [node name="Slime" parent="." instance=ExtResource("7_728yu")]
 position = Vector2(-376, 0)
+
+[node name="BushPrefab" parent="." instance=ExtResource("8_klj5e")]
+position = Vector2(232, -24)
