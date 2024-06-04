@@ -6,7 +6,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ukfr8"]
 shader = ExtResource("1_kcffw")
-shader_parameter/speed = 1.0
+shader_parameter/speed_uniform = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pcjxx"]
 size = Vector2(14, 13)
@@ -21,8 +21,13 @@ texture = ExtResource("2_wc4h5")
 region_enabled = true
 region_rect = Rect2(16, 48, 16, 16)
 
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 2.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_pcjxx")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
