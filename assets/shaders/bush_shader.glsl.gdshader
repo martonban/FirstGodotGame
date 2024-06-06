@@ -3,9 +3,14 @@ shader_type canvas_item;
 uniform float speed_uniform = 1.0f;
 
 float interpolation() {
-	float t = clamp(TIME, 0.0f, 1.0f);
-	float q = mix(-1.0f, 1.0f, t);
-	return (-(asin(q) * asin(q)) + 2.0f) * 30.f;
+	float q = -1.0f;
+	q = mix(0.f, 1.0f, 0.f);
+	return q;
+	//return (-(asin(q) * asin(q)) + 2.0f) * 30.f;
+}
+
+void fragment() {
+	COLOR = vec4(0.0f, interpolation(), 1.0f, 1.0f);
 }
 
 void vertex() {
@@ -13,8 +18,9 @@ void vertex() {
 	if(speed_uniform == 1.0f) {
 		speed = 3.0f;
 	}
+	
 	if(speed_uniform == 5.0f) {
-		speed = interpolation();
+		speed = interpolation(); 
 	}
 	
 	//if(VERTEX.y < 0.6) {

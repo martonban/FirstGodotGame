@@ -23,7 +23,7 @@ region_rect = Rect2(16, 48, 16, 16)
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
-wait_time = 2.0
+wait_time = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
